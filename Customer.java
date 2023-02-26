@@ -5,6 +5,7 @@ public class Customer {
 
     private String name;
     private List<Rental> rentals = new ArrayList<Rental>();
+    private Dispatcher dispatcher;
 
     public Customer(String name) {
         this.name = name;
@@ -49,6 +50,10 @@ public class Customer {
         for (Rental rental : rentals)
             total += rental.getFrequentRenterPoints();
         return total;
+    }
+
+    public void setDispatcher(Dispatcher d){
+        this.dispatcher = d;
     }
 
 }
